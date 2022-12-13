@@ -1,15 +1,47 @@
 #include<iostream>
 
 using namespace std;
+void adiff(int a, int b){
+   int a1;
+   int b1;
+   int c;
+  
+  if(a < 0){
+    a = 360 +a;
+  }
+  if(b < 0){
+    b = 360 +b;
+  }
+  
+  
+  if(a>=360){
+    a1 = a % 360;
+  }else{
+    a1 = a;
+  }
+  
+  if(b>=360){
+    b1 = b % 360;
+  }else{
+    b1 = b;
+  }
 
+  if(a1 > b1){
+    c = a1 - b1;
+  }else{
+    c = b1 - a1;
+  }
+
+  if(c>180){
+    c =c -180;
+  }
+ 
+  cout << c ;
+
+}
 
 int main(){
-  cout << adiff(180,270);
-  cout << adiff(210,45);
-  cout << adiff(0,360);
-  cout << adiff(10,350);
-  cout << adiff(95,260);
-  cout << adiff(90,-90);
-  cout << adiff(1000,280);
-  cout << adiff(60,244);
+  
+  adiff(20,160);
+
 }
